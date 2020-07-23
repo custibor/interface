@@ -1,8 +1,9 @@
+import com.sun.deploy.net.HttpRequest;
+import com.sun.deploy.net.HttpResponse;
+import sun.net.www.http.HttpClient;
+
 import java.net.*;
 import java.io.*;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 
 public class Client
 {
@@ -18,14 +19,14 @@ public class Client
     }
 
     public static void main(String args[]) throws IOException, InterruptedException {
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:8001/nekaj=ime"))
-                .build();
-
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+//        HttpClient client = HttpClient.New(new URL("http://localhost:8001/nekaj=ime"));
+//        HttpRequest request = HttpRequest.newBuilder()
+//                .uri(URI.create("http://localhost:8001/nekaj=ime"))
+//                .build();
+//
+//        HttpResponse<String> response = client.send(request,
+//                HttpResponse.BodyHandlers.ofString());
+//        System.out.println(response.body());
     }
 }
 
